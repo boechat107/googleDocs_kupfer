@@ -1,7 +1,7 @@
 #!/usr/bin/python 
 # -*- coding: utf-8 -*-
 # ========================================================================================= 
-# Author: Andre Boechat
+# Author: Andre Boechat <boechat107@gmail.com>
 # File: googleDocs.py
 # Date: April 25, 2011
 # Description: Search and open documents from a Google account.
@@ -56,7 +56,7 @@ def get_googleClient():
         client.ClientLogin(upass.username, upass.password, client.source)
     #except (gdata.service.BadAuthentication, gdata.service.CaptchaRequired), err:
     except:
-        pretty.print_error(__name__, 'picasa_login', 'authentication error')
+        pretty.print_error(__name__, 'google_login', 'authentication error')
         client = None
     return client
 
